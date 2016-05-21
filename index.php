@@ -71,7 +71,7 @@
                 </span>
               <?php endif; ?>
 
-            </div><!--/post-meta --> -->
+            </div> --><!--/post-meta -->
 						
 						<div class="the-content">
 							<?php the_content( 'Continue...' ); ?>
