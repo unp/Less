@@ -485,8 +485,8 @@ header #brand {
 }
 header #brand h1 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 900;
-  color: #565656;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.4);
   line-height: 23.68px;
   font-size: 16px;
   font-size: 1.6rem;
@@ -495,13 +495,17 @@ header #brand h1 {
   text-transform: uppercase;
 }
 header #brand h1 a {
-  color: #565656;
+  color: rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
 header #brand h1 span {
   font-weight: 200;
   color: #888888;
   text-transform: lowercase;
+}
+header #brand img {
+  vertical-align: bottom;
+  margin: 0 4px 3px 0;
 }
 header nav {
   float: left;

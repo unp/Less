@@ -26,12 +26,12 @@
     
 		
 		<div id="brand">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="https://s3-us-west-1.amazonaws.com/cloverbook-wp/logo.png" /></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="https://s3-us-west-1.amazonaws.com/cloverbook-wp/logo.png" /></a> blog</h1>
 		</div><!-- /brand -->
 	
   
 		<nav role="navigation" class="site-navigation main-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php /** wp_nav_menu( array( 'theme_location' => 'primary' ) ); */ ?>
 		</nav><!-- .site-navigation .main-navigation -->
 		
 		<div class="clear"></div>
@@ -64,14 +64,14 @@
 								<?php the_title() ?>
 							</a>
 						</h1>
-						<div class="post-meta">
-							<?php if( comments_open() ) : ?>
-								<span class="comments-link">
-									<?php comments_popup_link( __( 'Comment', 'break' ), __( '1 Comment', 'break' ), __( '% Comments', 'break' ) ); ?>
-								</span>
-							<?php endif; ?>
-						
-						</div><!--/post-meta -->
+						<!-- <div class="post-meta">
+              <?php if( comments_open() ) : ?>
+                <span class="comments-link">
+                  <?php /** comments_popup_link( __( 'Comment', 'break' ), __( '1 Comment', 'break' ), __( '% Comments', 'break' ) ); */ ?>
+                </span>
+              <?php endif; ?>
+
+            </div><!--/post-meta --> -->
 						
 						<div class="the-content">
 							<?php the_content( 'Continue...' ); ?>
@@ -213,10 +213,7 @@
 
 <footer class="site-footer" role="contentinfo">
 	<div class="site-info container">
-		<?php do_action( 'break_credits' ); ?>
-		<a href="http://wordpress.org/" title="A Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress</a>
-		<span class="sep"> and </span>
-		<a href="http://lessmade.com/themes/less" rel="theme">LESS</a> by <a href="http://jarederickson.com" rel="designer">Jared Erickson</a>
+		Copyright &copy; <?php echo date("Y") ?> Cloverbook LLC
 	</div><!-- .site-info -->
 </footer><!-- #colophon .site-footer -->
 
