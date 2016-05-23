@@ -557,13 +557,11 @@ article .the-content p {
 }
 article .the-content p:first-child:first-letter {
   font-size: 63px;
+  font-weight: bold;
   line-height: 1em;
   color: #4fc876;
   float: left;
   margin: -4px 4px -20px 0;
-}
-article .the-content p:first-child:first-line {
-  font-weight: bold;
 }
 article .the-content img {
   width: 100%;
