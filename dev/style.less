@@ -159,16 +159,6 @@ hr {
 /* Text elements */
 p {
 	margin-bottom: 1.5em;
-  &:first-child:first-letter {
-    font-size: 63px;
-    line-height: 1em;
-    color: @secondary;
-    float: left;
-    margin: -4px 4px -20px 0;
-  }
-  &:first-child:first-line {
-    font-weight: bold;
-  }
 }
 ul, ol {
 	margin: 0 0 1.5em 3em;
@@ -381,6 +371,16 @@ article {
 	
 		p {
 			color: @text-color;
+      &:first-child:first-letter {
+        font-size: 63px;
+        line-height: 1em;
+        color: @secondary;
+        float: left;
+        margin: -4px 4px -20px 0;
+      }
+      &:first-child:first-line {
+        font-weight: bold;
+      }
 		}
 		
 		img {

@@ -366,16 +366,6 @@ hr {
 p {
   margin-bottom: 1.5em;
 }
-p:first-child:first-letter {
-  font-size: 63px;
-  line-height: 1em;
-  color: #4fc876;
-  float: left;
-  margin: -4px 4px -20px 0;
-}
-p:first-child:first-line {
-  font-weight: bold;
-}
 ul,
 ol {
   margin: 0 0 1.5em 3em;
@@ -564,6 +554,16 @@ article .the-content a {
 }
 article .the-content p {
   color: rgba(0, 0, 0, 0.8);
+}
+article .the-content p:first-child:first-letter {
+  font-size: 63px;
+  line-height: 1em;
+  color: #4fc876;
+  float: left;
+  margin: -4px 4px -20px 0;
+}
+article .the-content p:first-child:first-line {
+  font-weight: bold;
 }
 article .the-content img {
   width: 100%;
