@@ -17,7 +17,7 @@ License: GNU General Public License
 	
 	// Main
 	@primary:			#343434;
-	@secondary:			#007998;
+	@secondary:			#4FC876;
 	
 	// Shades
 	@dark:				#101010;
@@ -46,31 +46,31 @@ License: GNU General Public License
 	// ----------------------
 	
 	// if you want to use a webfont from gooogle or something
-	@import url(http://fonts.googleapis.com/css?family=Arvo:400,700);
+	// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Arvo:400,700);
 	
 	// Body Font family
-	@body-font:		"Helvetica Neue", Helvetica, Arial, sans-serif;
+	@body-font:		"Georgia", Verdana, Times, Times New Roman, serif;
 	
 	// Heading font family
-	@heading-font:	"Arvo", Georgia, serif;
+	@heading-font:	"Lucida Grande", Helvetica Neue, Helvetica, Arial, sans-serif;
 	
 	// Site name size
 	@site-text-size:	16;
 	
 	// Body text size
-	@body-text-size:	18;
+	@body-text-size:	20;
 	
 	// Title text size
 	@title-text-size:	38;
 	
 	// Site name color
-	@site-name-color:	@grey;
+	@site-name-color:	rgba(0,0,0,0.4);
 	
 	// Site heading color
 	@headinng-color:	#404040;
 	
 	// Site Text color
-	@text-color:		#787878;	
+	@text-color:		rgba(0,0,0,0.8);	
 	
 	// Link colors
 	@link-color:		@secondary;
@@ -110,6 +110,10 @@ select {
 	margin: 0;
 	background: @site-bg;
 	font-family: @body-font;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 	.font-size(@body-text-size);
 }
 
@@ -255,10 +259,15 @@ header {
 		float: left;
 		width: 80%;
 		margin-top: 22px;
-		
+    
+    img {
+      margin: 0 4px 3px 0;
+      vertical-align: bottom;
+    }		
+
 		h1 {
-			font-family: @body-font;
-			font-weight: 900;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-weight: 700;
 			color: @site-name-color;
 			.font-size(@site-text-size);
 			margin: 0;
@@ -325,6 +334,7 @@ article {
 		color: @headinng-color;
 		.font-size(@title-text-size);
 		font-weight: 700;
+    line-height: 1.1;
 		
 		a {
 			text-decoration: none;
@@ -495,7 +505,7 @@ h3#comments {
 footer {
 	text-align: center;
 	padding-bottom: 40px;
-	font-size: 12px;
+	font-size: 14px;
 	
 }// footer
 

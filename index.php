@@ -64,14 +64,14 @@
 								<?php the_title() ?>
 							</a>
 						</h1>
-						<!-- <div class="post-meta">
+						<div class="post-meta">
               <?php if( comments_open() ) : ?>
                 <span class="comments-link">
                   <?php /** comments_popup_link( __( 'Comment', 'break' ), __( '1 Comment', 'break' ), __( '% Comments', 'break' ) ); */ ?>
                 </span>
               <?php endif; ?>
 
-            </div> --><!--/post-meta -->
+            </div><!--/post-meta -->
 						
 						<div class="the-content">
 							<?php the_content( 'Continue...' ); ?>
@@ -124,9 +124,9 @@
 						<h1 class="title"><?php the_title() ?></h1>
 						<div class="post-meta">
 							<?php if( comments_open() ) : ?>
-								<span class="comments-link">
-									<?php comments_popup_link( __( 'Comment', 'less' ), __( '1 Comment', 'less' ), __( '% Comments', 'less' ) ); ?>
-								</span>
+								<!-- ><span class="comments-link">
+                  <?php /** comments_popup_link( __( 'Comment', 'less' ), __( '1 Comment', 'less' ), __( '% Comments', 'less' ) ); */ ?>
+								</span> -->
 							<?php endif; ?>
 						
 						</div><!--/post-meta -->
