@@ -7,6 +7,7 @@
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
 <?php wp_head(); ?>
 
@@ -21,23 +22,21 @@
 	/*-----------------------------------------------------------------------------------*/
 ?>
 
-<header id="masthead" class="site-header" role="banner">
-	<div class="container">
-    
-		
-		<div id="brand">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="https://s3-us-west-1.amazonaws.com/cloverbook-wp/logo.png" /></a> blog</h1>
-		</div><!-- /brand -->
-	
-  
-		<nav role="navigation" class="site-navigation main-navigation">
-			<?php /** wp_nav_menu( array( 'theme_location' => 'primary' ) ); */ ?>
-		</nav><!-- .site-navigation .main-navigation -->
-		
-		<div class="clear"></div>
-	</div><!--/container -->
-		
-</header><!-- #masthead .site-header -->
+<header>
+  <div class="header-container">
+    <a href="/"><img src="https://s3-us-west-1.amazonaws.com/cloverbook-wp/logo.png" alt="Cloverbook" /></a>
+    <nav>
+      <ul class="nav">
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/blog" class="active">Blog</a></li>
+      </ul>
+      <a href="/#register">
+        <button class="btn btn-primary" type="button" id="sign-up-button">Sign Up</button>
+      </a>
+    </nav>
+  </div>
+</header>
 
 <div class="container">
 
@@ -145,6 +144,12 @@
 					</article>
 
 				<?php endwhile; ?>
+        
+        <?php if ( is_active_sidebar( 'post_footer_1' ) ) : ?>
+        	<div class="post-footer widget-area">
+        		<?php dynamic_sidebar( 'post_footer_1' ); ?>
+        	</div><!-- #primary-sidebar -->
+        <?php endif; ?>
 				
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
@@ -160,7 +165,6 @@
 				</article>
 
 			<?php endif; ?>
-
 
 	<?php } //end is_single(); ?>
 	

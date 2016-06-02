@@ -19,6 +19,24 @@ register_nav_menus(
 );
 
 /*-----------------------------------------------------------------------------------*/
+/* Register our sidebars and widgetized areas.
+/*-----------------------------------------------------------------------------------*/
+
+
+function less_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Post Footer',
+		'id'            => 'post_footer_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
+}
+
+/*-----------------------------------------------------------------------------------*/
 /* Enque Styles and Scripts
 /*-----------------------------------------------------------------------------------*/
 
@@ -29,9 +47,13 @@ function less_scripts()  {
 			
 	// add fitvid
 	wp_enqueue_script( 'less-fitvid', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), LESS_VERSION, true );
+  
+	// add classie
+	wp_enqueue_script( 'less-classie', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), LESS_VERSION, true );
 	
 	// add theme scripts
 	wp_enqueue_script( 'less', get_template_directory_uri() . '/js/theme.min.js', array(), LESS_VERSION, true );
   
 }
 add_action( 'wp_enqueue_scripts', 'less_scripts' );
+add_action( 'widgets_init', 'less_widgets_init' );
