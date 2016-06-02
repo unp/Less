@@ -491,6 +491,7 @@ header {
   background: white;
   border-bottom: 1px solid #DEDEDE;
   height: 80px;
+  letter-spacing: 0;
   line-height: 80px;
   position: fixed;
   top: 0;
@@ -559,7 +560,8 @@ header.smaller {
 }
 .container {
   max-width: 720px;
-  padding: 140px;
+  padding: 20px;
+  padding-top: 140px;
   margin: 0 auto;
   position: relative;
 }
